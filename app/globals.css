@@ -2,25 +2,44 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #111827;
+  --muted: #4b5563;
+  --radius: 0.75rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto), system-ui, sans-serif;
+}
+
+.font-heading {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+}
+
+/* Banner overlay text - glossy, bright, high visibility */
+.banner-text-glossy {
+  text-shadow:
+    0 0 20px rgba(255, 255, 255, 0.6),
+    0 0 40px rgba(255, 255, 255, 0.35),
+    0 2px 4px rgba(0, 0, 0, 0.8),
+    1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+.banner-text-glossy-strong {
+  text-shadow:
+    0 0 30px rgba(255, 255, 255, 0.7),
+    0 0 60px rgba(255, 255, 255, 0.4),
+    0 0 90px rgba(255, 255, 255, 0.2),
+    0 2px 6px rgba(0, 0, 0, 0.85),
+    1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.banner-text-glossy-soft {
+  text-shadow:
+    0 0 16px rgba(255, 255, 255, 0.5),
+    0 0 32px rgba(255, 255, 255, 0.25),
+    0 2px 4px rgba(0, 0, 0, 0.7);
 }
