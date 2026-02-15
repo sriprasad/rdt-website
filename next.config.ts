@@ -4,13 +4,9 @@ const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
   output: "export",
-
   basePath: isProd ? "/rdt-website" : "",
   assetPrefix: isProd ? "/rdt-website/" : "",
-
-  images: {
-    unoptimized: true,
-  },
+  images: { unoptimized: true },
 };
 
 export default nextConfig;
