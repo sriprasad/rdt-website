@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "deploy": "gh-pages -d out",
+    "deploy": "node -e \"require('fs').mkdirSync('deploy/rdt-website',{recursive:true}); require('fs').cpSync('out', 'deploy/rdt-website', {recursive: true})\" && gh-pages -d deploy",
     "start": "next start",
     "lint": "eslint"
   },
