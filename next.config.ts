@@ -1,12 +1,16 @@
 import type { NextConfig } from "next";
 
+const repoName = "rdt-website";
 const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: isProd ? "/rdt-website" : "",
-  assetPrefix: isProd ? "/rdt-website/" : "",
-  images: { unoptimized: true },
+  trailingSlash: true,
+  basePath:isProd ? `/${repoName}` : "",
+  assetPrefix: isProd ? `/${repoName}/` : "" ,
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
